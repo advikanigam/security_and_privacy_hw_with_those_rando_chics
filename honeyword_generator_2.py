@@ -8,10 +8,10 @@ from mutators.tweak import Tweak
 from mutators.change_special_character import ChangeSpecialCharacter
 from mutators.add_padding import AddPadding
 from mutators.tough_nut import ToughNut
-from mutators.change_deliminator import ChangeDeliminator
+from mutators.change_delimiter import Changedelimiter
 
 # mutators
-mutators = [ Tweak, ChangeSpecialCharacter, AddPadding, ToughNut, ChangeDeliminator ]
+mutators = [ Tweak, ChangeSpecialCharacter, AddPadding, ToughNut, Changedelimiter ]
 
 # unpack command line args
 assert len(sys.argv) == 4, "missing arguments"
