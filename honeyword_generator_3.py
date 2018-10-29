@@ -27,7 +27,7 @@ output_file = open(output_filename, "w+")
 for password in passwords:
     # choose random password seeds
     if n < 5:
-        num_random_seed_passwords = 1
+        num_random_seed_passwords = n - 1
     else:
         num_random_seed_passwords = (n // 3) - 1
     seed_passwords = [ password ] + random.sample(rockyou_passwords, num_random_seed_passwords)
