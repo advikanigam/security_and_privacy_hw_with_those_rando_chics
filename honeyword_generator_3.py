@@ -26,7 +26,7 @@ rockyou_passwords = [ line.strip().split(" ")[-1] for line in open("data/passwor
 output_file = open(output_filename, "w+")
 for password in passwords:
     # choose random password seeds
-    num_random_seed_passwords = max(n-3, 0) // 3
+    num_random_seed_passwords = max(n-2, 0) // 2
     seed_passwords = [ password ] + random.sample(rockyou_passwords, num_random_seed_passwords)
     np.random.shuffle(seed_passwords)
     seed_generator = itertools.cycle(seed_passwords)
@@ -35,8 +35,9 @@ for password in passwords:
     while len(honeywords) < n:
         seed = seed_generator.__next__()
         mutator = random.choice(mutators)
-        if mutator.matches(seed):
-            honeywords.add(mutator.run(seed))
+        while not mutator.matches(seed):
+            mutator = random.choice(mutators)
+        honeywords.add(mutator.run(seed))
     honeywords = list(honeywords)
     np.random.shuffle(honeywords)
     output_file.write(" ".join(honeywords) + "\n")

@@ -26,7 +26,7 @@ rockyou_passwords = [ line.strip().split(" ")[-1] for line in open("data/top_100
 output_file = open(output_filename, "w+")
 for password in passwords:
     # choose random password seeds
-    num_random_seed_passwords = max(n-3, 0) // 3
+    num_random_seed_passwords = max(n-2, 0) // 2
     seed_passwords = [ password ] + random.sample(rockyou_passwords, num_random_seed_passwords)
     np.random.shuffle(seed_passwords)
     seed_generator = itertools.cycle(seed_passwords)
