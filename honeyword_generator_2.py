@@ -29,7 +29,7 @@ for password in passwords:
     if n < 5:
         num_random_seed_passwords = n - 1
     else:
-        num_random_seed_passwords = (n // 3) - 1
+        num_random_seed_passwords = (n // 2) - 1
     seed_passwords = [ password ] + random.sample(rockyou_passwords, num_random_seed_passwords)
     np.random.shuffle(seed_passwords)
     seed_generator = itertools.cycle(seed_passwords)
