@@ -8,9 +8,11 @@ from mutators.change_special_character import ChangeSpecialCharacter
 from mutators.add_padding import AddPadding
 from mutators.tough_nut import ToughNut
 from mutators.change_delimiter import ChangeDelimiter
+from mutators.capitalize import Capitalize
+from mutators.reduce import Reduce
 
 # mutators
-mutators = [ Tweak, ChangeSpecialCharacter, AddPadding, ToughNut, ChangeDelimiter ]
+mutators = [ AddPadding, ToughNut, ChangeDelimiter, Capitalize, Reduce ]
 
 # unpack command line args
 assert len(sys.argv) == 4, "missing arguments"
