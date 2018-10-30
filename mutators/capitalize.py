@@ -9,7 +9,7 @@ class Capitalize(BaseMutator):
 
     @classmethod
     def match(self, password):
-        return password[0] in (self.ALPHA_LOWERS + self.ALPHA_UPPERS)
+        return password[0] in (self.ALPHA_LOWERS.union(self.ALPHA_UPPERS))
 
     @classmethod
     def run(self, password):
