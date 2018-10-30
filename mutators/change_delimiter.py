@@ -5,7 +5,7 @@ from mutators.base_mutator import BaseMutator
 import re
 
 class ChangeDelimiter(BaseMutator):
-    delimiters = set(" _-*@")
+    delimiters = set("_-*@")
 
     @classmethod
     def match(self, password):
