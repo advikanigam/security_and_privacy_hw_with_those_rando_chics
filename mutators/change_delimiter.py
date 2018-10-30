@@ -1,10 +1,10 @@
 from pdb import set_trace
 import numpy as np
 import random
-from mutators.base_matcher import BaseMatcher
+from mutators.base_mutator import BaseMutator
 import re
 
-class Changedelimiter(BaseMatcher):
+class ChangeDelimiter(BaseMutator):
     delimiters = set(" _-*@")
 
     @classmethod

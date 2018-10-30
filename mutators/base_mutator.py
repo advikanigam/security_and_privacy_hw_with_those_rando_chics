@@ -1,6 +1,6 @@
 import random
 
-class BaseMatcher:
+class BaseMutator:
 
     ALPHA_LOWERS = set([ chr(int) for int in range(97,123) ])
     ALPHA_UPPERS = set([ chr(int) for int in range(65,91) ])

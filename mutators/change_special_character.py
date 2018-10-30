@@ -1,11 +1,11 @@
 from pdb import set_trace
 import numpy as np
 import random
-from mutators.base_matcher import BaseMatcher
+from mutators.base_mutator import BaseMutator
 import re
 
 
-class ChangeSpecialCharacter(BaseMatcher):
+class ChangeSpecialCharacter(BaseMutator):
     @classmethod
     def match(self, password):
         matcher = ".*[\{}].*".format("\\".join(list(self.SYMBOLS)))

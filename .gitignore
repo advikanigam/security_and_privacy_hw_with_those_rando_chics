@@ -1,5 +1,3 @@
-data/*
+data/passwords.txt
 hw3.zip
-test_output.txt
-test_pws.txt
 *.pdf

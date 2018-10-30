@@ -1,12 +1,12 @@
 from pdb import set_trace
 import numpy as np
 import random
-from mutators.base_matcher import BaseMatcher
+from mutators.base_mutator import BaseMutator
 
-class Tweak(BaseMatcher):
+class Tweak(BaseMutator):
     @classmethod
     def chance(self):
-        return 0.3
+        return 0.2
 
     @classmethod
     def _tweak_character(self, char):
