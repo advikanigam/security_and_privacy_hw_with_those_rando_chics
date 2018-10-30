@@ -3,7 +3,7 @@ import numpy as np
 import random
 from mutators.base_mutator import BaseMutator
 
-padding_characters = set(["!", "!!", "!!!", "*", "**", "***", "123", "123456"])
+padding_characters = set(["!", "!!", "!!!", "*", "***", "123", "123456", ".", "..."])
 
 class AddPadding(BaseMutator):
     @classmethod

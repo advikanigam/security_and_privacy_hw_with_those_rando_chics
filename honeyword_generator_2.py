@@ -13,7 +13,7 @@ from mutators.capitalize import Capitalize
 from mutators.reduce import Reduce
 
 # mutators
-mutators = [ Tweak, ChangeSpecialCharacter, AddPadding, ToughNut, ChangeDelimiter, Capitalize, Reduce ]
+mutators = [ AddPadding, ToughNut, ChangeDelimiter, Capitalize, Reduce ]
 
 # unpack command line args
 assert len(sys.argv) == 4, "missing arguments"
